@@ -1,0 +1,415 @@
+@import "./colors.css";
+@import "./pokecard.css";
+
+@font-face {
+  font-family: 'PokemonSolid';
+  src: url('./assets/fonts/Pokemon-Solid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+  --primary-color: rgba(0, 0, 0, 0.7);
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.welcome-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.welcome-header, .breaker{
+  height: 10vh;
+  font-size: 2em;
+  font-weight: bold;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Playwrite AU QLD", cursive;
+  border-bottom: 1px solid black;
+  background-color: #222;
+  color: #eee;
+}
+
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.nav-bar button {
+  background: none;
+  border: none;
+  color: #eee;
+  font-size: 0.7em;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-bar button:hover {
+  color: rgb(238, 238, 86);
+}
+
+
+.title{
+  font-family: 'PokemonSolid', sans-serif;
+  font-size: 2em;
+  color: rgb(238, 238, 86); 
+  text-shadow: 2px 3px 0 black; 
+  margin-left: 30px;
+  transform: skewX(-10deg);
+}
+
+
+/* ************** Hero banner / Search bar **************** */
+
+.hero-banner {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: url('https://images.wallpapersden.com/image/download/pokemon-4k-cool_bG1mbGiUmZqaraWkpJRobWllrWdpZWU.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content, .search-bar, .search-button{
+  z-index: 1;
+}
+
+.hero-content p{
+  width: 500px;
+  margin-bottom: 2em;
+  font-size: 2em;
+}
+
+.search-container{
+  position: relative;
+  width: 500px;
+}
+
+.search-bar{
+  width: 100%;
+  max-width: 500px; 
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+  appearance: none;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+
+.search-bar:focus{
+  opacity: 0.9;
+}
+
+.search-suggestions{
+  list-style: none;
+  margin: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.search-item{
+  cursor: pointer;
+  padding: 10px;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.search-item:hover{
+  background: #ccc;
+  color: #222;
+  transform: scale(1.05);
+  border: 1px solid black;
+}
+
+/* ************** pokedex showcase **************** */
+
+.pokedex-container{
+  display: flex;
+  flex: 0 0 50%;
+  background: linear-gradient(160deg, #2a2a2a, #3a3a52, #2f3d55);
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 15px;
+  color: #fff;
+}
+
+.pokedex-container img{
+  width: 125px;
+  height: 125px;
+}
+
+.left-side-pokedex, .right-side-pokedex{
+  width: 50%;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.left-side-pokedex{
+  border-right: 2px solid black;
+}
+
+.poke-id{
+  background: rgba(255,255,255,0.1);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  display: inline-block;
+  margin-top: 4px;
+  color: #ddd;
+}
+
+.breaker{
+  font-family: "Playwrite AU QLD", cursive;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ************** Random Pokemon **************** */
+
+.random-pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em 1em;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+}
+
+.section-title {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 2em;
+  color: #333;
+}
+
+
+.random-stats h4 {
+  margin-bottom: 1em;
+}
+
+
+
+/* ************** Footer **************** */
+
+.footer, .footer-info{
+  width: 100%;
+  height: 8vh;
+  background-color: #333;
+}
+
+.footer{
+  text-align: right;
+  padding: 10px 20px 0 0;
+  font-size: 30px;
+  font-family: "Playwrite AU QLD", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(238, 238, 86);
+  border-bottom: 1px solid #111;
+}
+
+.footer-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.info-item{
+  color: #999;
+  display: inline-block;
+  width: 25%;
+  font-size: 19px;
+}
+
+
+/* Responsive Web Design */
+
+@media (max-width:1100px){
+  .welcome-header{
+    min-height: 12vh;
+  }
+  
+}
+
+/* ***************** RWD - TABLET ***************** */
+@media (max-width: 1024px) {
+  .welcome-header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .welcome-title{
+    border-bottom: 1px solid #fff;
+  }
+
+  .nav-bar {
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+
+  .hero-content p {
+    width: 500px;
+    font-size: 2em;
+    text-align: center;
+    margin: 0 auto 2em;
+  }
+
+  .search-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+   .search-bar {
+    width: 100%;
+    max-width: 100%; 
+  }
+
+  .search-suggestions{
+    margin-top: 50px;
+  }
+
+  .pokedex-container {
+    flex-direction: column;
+  }
+
+  .left-side-pokedex,
+  .right-side-pokedex {
+    width: 100%;
+    border-right: none;
+    padding: 15px 0;
+  }
+
+  .info-item {
+    font-size: 16px;
+  }
+}
+
+/* ***************** RWD - MOBILE ***************** */
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.5em;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .welcome-title{
+    border-bottom: 1px solid #fff;
+  }
+
+  .nav-bar button{
+    font-size: 0.5em;
+  }
+
+  .hero-banner {
+    height: auto;
+    min-height: 80vh;
+    padding: 2em 1em;
+    text-align: center;
+  }
+
+  .hero-content p {
+    width: 100%;
+    font-size: 1.2em;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .search-bar {
+    font-size: 1em;
+    height: 45px;
+  }
+
+  .search-suggestions{
+    margin-top: 45px;
+  }
+
+  .search-item {
+    font-size: 0.9em;
+  }
+
+  .pokedex-container {
+    padding: 1em;
+    font-size: 16px;
+  }
+
+  .pokedex-container img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .breaker {
+    font-size: 1.5em; 
+    min-height: 15vh;
+    text-align: center;
+    padding: 3em 1em;
+    overflow-wrap: break-word;
+  }
+
+  .footer {
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .info-item {
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+
+
