@@ -1,5 +1,7 @@
+import './Pokemons.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Breaker from '../Breaker/Breaker';
 
 const Pokemons = () => {
   const api = 'https://pokeapi.co/api/v2/pokemon?limit=30';
@@ -55,7 +57,7 @@ const Pokemons = () => {
           </div>
         </div>
         
-        <div className="breaker">Random Pokemon</div>
+        <Breaker title={"Random Pokemon"}/>
     </>
   )
 }

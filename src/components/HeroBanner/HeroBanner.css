@@ -1,0 +1,137 @@
+.hero-banner {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: url('https://images.wallpapersden.com/image/download/pokemon-4k-cool_bG1mbGiUmZqaraWkpJRobWllrWdpZWU.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content, .search-bar, .search-button{
+  z-index: 1;
+}
+
+.hero-content p{
+  width: 500px;
+  margin-bottom: 2em;
+  font-size: 2em;
+}
+
+.search-container{
+  position: relative;
+  width: 500px;
+}
+
+.search-bar{
+  width: 100%;
+  max-width: 500px; 
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+  appearance: none;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+
+.search-bar:focus{
+  opacity: 0.9;
+}
+
+.search-suggestions{
+  list-style: none;
+  margin: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.search-item{
+  cursor: pointer;
+  padding: 10px;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.search-item:hover{
+  background: #ccc;
+  color: #222;
+  transform: scale(1.05);
+  border: 1px solid black;
+}
+
+
+@media (max-width: 1024px){
+   .hero-content p {
+    width: 500px;
+    font-size: 2em;
+    text-align: center;
+    margin: 0 auto 2em;
+  }
+
+  .search-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+   .search-bar {
+    width: 100%;
+    max-width: 100%; 
+  }
+
+  .search-suggestions{
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 600px){
+    .hero-banner {
+    height: auto;
+    min-height: 80vh;
+    padding: 2em 1em;
+    text-align: center;
+  }
+
+  .hero-content p {
+    width: 100%;
+    font-size: 1.2em;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .search-bar {
+    font-size: 1em;
+    height: 45px;
+  }
+
+  .search-suggestions{
+    margin-top: 45px;
+  }
+
+  .search-item {
+    font-size: 0.9em;
+  }
+}

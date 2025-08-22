@@ -1,12 +1,12 @@
-import WelcomeBar from '../components/WelcomeBar'
-import HeroBanner from '../components/HeroBanner'
+import WelcomeBar from '../components/WelcomeBar/WelcomeBar'
+import HeroBanner from '../components/HeroBanner/HeroBanner'
 
 const Header = () => {
   return (
-    <div>
+    <>
         <WelcomeBar/>
         <HeroBanner/>
-    </div>
+    </>
   )
 }
 

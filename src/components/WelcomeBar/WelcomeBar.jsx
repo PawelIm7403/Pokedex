@@ -1,4 +1,5 @@
-import NavBar from "./NavBar"
+import NavBar from "../Navbar/NavBar";
+import './WelcomeBar.css';
 
 const WelcomeBar = () => {
   return (

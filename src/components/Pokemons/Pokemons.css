@@ -1,0 +1,60 @@
+.pokedex-container{
+  display: flex;
+  flex: 0 0 50%;
+  background: linear-gradient(160deg, #2a2a2a, #3a3a52, #2f3d55);
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 15px;
+  color: #fff;
+}
+
+.pokedex-container img{
+  width: 125px;
+  height: 125px;
+}
+
+.left-side-pokedex, .right-side-pokedex{
+  width: 50%;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.left-side-pokedex{
+  border-right: 2px solid black;
+}
+
+.poke-id{
+  background: rgba(255,255,255,0.1);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  display: inline-block;
+  margin-top: 4px;
+  color: #ddd;
+}
+
+@media (max-width: 1024px){
+    .pokedex-container {
+    flex-direction: column;
+  }
+
+  .left-side-pokedex,
+  .right-side-pokedex {
+    width: 100%;
+    border-right: none;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 600px){
+    .pokedex-container{
+        padding: 1em;
+        font-size: 1em;
+    }
+
+    .pokedex-container img{
+        width: 100px;
+        height: 100px;
+    }
+
+}

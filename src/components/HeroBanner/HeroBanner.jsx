@@ -1,3 +1,5 @@
+import './HeroBanner.css';
+import Breaker from '../Breaker/Breaker';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -71,10 +73,8 @@ const HeroBanner = () => {
           )}
         </div>
       </div>
-
-      <div className="breaker">
-            First 30 pokemons in pokedex
-        </div>
+       <Breaker title={"First 30 pokemons in pokedex"}/>
+      
     </>
   );
 };

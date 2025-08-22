@@ -1,0 +1,39 @@
+.random-pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em 1em;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+}
+
+.section-title {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 2em;
+  color: #333;
+}
+
+
+.random-stats h4 {
+  margin-bottom: 1em;
+}
+
+@media (max-width: 1024px){
+
+}
+
+@media (max-width: 600px){
+   .pokedex-container {
+    padding: 1em;
+    font-size: 16px;
+  }
+
+  .pokedex-container img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+  }
+}
